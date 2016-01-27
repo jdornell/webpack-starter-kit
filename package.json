@@ -1,14 +1,23 @@
 {
-  "name": "webpack-project",
+  "name": "webpack-starter-kit",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Starter kit for Webpack",
+  "main": "app.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "start": "webpack-dev-server --inline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdornell/webpack-starter-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jdornell/webpack-starter-kit/issues"
+  },
+  "homepage": "https://github.com/jdornell/webpack-starter-kit#readme"
 }
