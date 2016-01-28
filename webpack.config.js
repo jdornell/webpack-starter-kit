@@ -1,20 +1,26 @@
 module.exports = {
-  entry: "./app.js",
-  output: {
-    filename: "bundle.js"
-},
-module: {
-   loaders: [
-      {
-         test: /\.js$/,
-         exclude: /node_modules/,
-         loader: 'babel-loader',
-         query: {
-            cacheDirectory: true,
-            presets: ['react', 'es2015']
+   entry: "./src/js/app.js",
+   output: {
+      filename: "bundle.js"
+   },
+   devServer: {
+      contentBase: "./src/content"
+   },
+   module: {
+      loaders: [
+         {
+            test: [/\.js$/, /\.jsx$/],
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            query: {
+               cacheDirectory: true,
+               presets: ['react', 'es2015']
+            }
          }
-      }
-   ]
-},
-watch: true
+      ]
+   },
+   resolve: {
+      extensions: ['', '.js', '.jsx']
+   },
+   watch: true
 }
